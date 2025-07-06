@@ -1,0 +1,15 @@
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.flex-item {
+    background-color: white;
+    padding: 20px;
+    margin: 5px;
+    border: 1px solid #333;
+}

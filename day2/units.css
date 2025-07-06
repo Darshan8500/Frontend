@@ -1,0 +1,12 @@
+
+.absolute-box {
+    width: 300px;
+    font-size: 16px;
+    background: lightgray;
+}
+
+.relative-box {
+    width: 50%;
+    font-size: 1.5em;
+    background: lightyellow;
+}

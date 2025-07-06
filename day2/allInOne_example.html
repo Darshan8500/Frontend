@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2nd Session - Full HTML & CSS Example</title>
+  <style>
+    /* =========================
+       CSS Variables (Global Scope)
+    ============================ */
+    :root {
+      --main-color: #3498db;
+      --accent-color: #2ecc71;
+      --text-color: #333;
+      --font-main: 'Segoe UI', sans-serif;
+    }
+
+    /* =========================
+       Typography
+    ============================ */
+    body {
+      font-family: var(--font-main);
+      font-size: 16px;
+      color: var(--text-color);
+      margin: 20px;
+    }
+
+    h1, h2 {
+      color: var(--main-color);
+    }
+
+    /* =========================
+       Box Model
+    ============================ */
+    .box {
+      width: 300px;
+      padding: 20px;
+      margin: 15px;
+      border: 3px solid #000;
+      box-sizing: border-box;
+    }
+
+    /* =========================
+       Units - Absolute & Relative
+    ============================ */
+    .absolute {
+      font-size: 16px; /* px - Absolute */
+    }
+
+    .relative {
+      font-size: 1.5em; /* em - Relative */
+    }
+
+    /* =========================
+       Specificity
+    ============================ */
+    p {
+      color: blue; /* Element selector = 1 */
+    }
+
+    .highlight {
+      color: green; /* Class selector = 10 */
+    }
+
+    #important {
+      color: red; /* ID selector = 100 */
+    }
+
+    /* =========================
+       Positioning
+    ============================ */
+    .relative-box {
+      position: relative;
+      left: 10px;
+      background-color: lightyellow;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 200px;
+      left: 100px;
+      background-color: lightpink;
+      padding: 10px;
+    }
+
+    .fixed-box {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: lightblue;
+      padding: 10px;
+    }
+
+    /* =========================
+       Flexbox
+    ============================ */
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #eee;
+      padding: 10px;
+    }
+
+    .flex-item {
+      background: var(--accent-color);
+      color: white;
+      padding: 20px;
+      flex: 1;
+      text-align: center;
+    }
+
+    /* =========================
+       Mobile Responsive
+    ============================ */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 14px;
+      }
+      .flex-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========================
+       TEXT ELEMENTS
+  ============================ -->
+  <h1>Welcome to Smart City</h1>
+  <h2>HTML & CSS Topics</h2>
+  <p>This is a paragraph using <strong>strong</strong> and <span style="color: red;">span</span>.</p>
+
+  <!-- =========================
+       LISTS
+  ============================ -->
+  <h2>Lists</h2>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+  <ol>
+    <li>Step One</li>
+    <li>Step Two</li>
+  </ol>
+  <dl>
+    <dt>HTML</dt>
+    <dd>Markup Language</dd>
+  </dl>
+
+  <!-- =========================
+       LINKS
+  ============================ -->
+  <h2>Links</h2>
+  <a href="https://www.google.com" target="_blank">Google (external)</a><br>
+  <a href="about.html">About (relative)</a><br>
+  <a href="files/sample.pdf" download>Download PDF</a>
+
+  <!-- =========================
+       FORMS
+  ============================ -->
+  <h2>Form Example</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- =========================
+       TABLE
+  ============================ -->
+  <h2>Table</h2>
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Subject</th>
+    </tr>
+    <tr>
+      <td>Alice</td>
+      <td>Math</td>
+    </tr>
+  </table>
+
+  <!-- =========================
+       BOX MODEL
+  ============================ -->
+  <h2>Box Model</h2>
+  <div class="box">This is a box with padding, border, and margin.</div>
+
+  <!-- =========================
+       UNITS
+  ============================ -->
+  <h2>Units</h2>
+  <p class="absolute">This uses absolute units (px).</p>
+  <p class="relative">This uses relative units (em).</p>
+
+  <!-- =========================
+       SPECIFICITY
+  ============================ -->
+  <h2>Specificity</h2>
+  <p>This has default selector.</p>
+  <p class="highlight">This is class selector.</p>
+  <p id="important">This is ID selector.</p>
+
+  <!-- =========================
+       POSITIONING
+  ============================ -->
+  <h2>Positioning</h2>
+  <div class="relative-box">Relative Box</div>
+  <div class="absolute-box">Absolute Box</div>
+  <div class="fixed-box">Fixed Box</div>
+
+  <!-- =========================
+       FLEXBOX
+  ============================ -->
+  <h2>Flexbox</h2>
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+</body>
+</html>
